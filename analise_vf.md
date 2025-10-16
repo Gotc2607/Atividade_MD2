@@ -1,4 +1,4 @@
-<!-- Análise de Afirmativas (Verdadeiro ou Falso) - Questão 04
+Análise de Afirmativas (Verdadeiro ou Falso) - Questão 04
 Afirmativa 1
 O algoritmo de Euclides estendido é utilizado para calcular o inverso modular de um número. 
 
@@ -32,4 +32,4 @@ Resposta: Verdadeiro (V)
 Afirmativa 7
 O cálculo de fi(n1) (função totiente de Euler) é utilizado apenas quando n1 não é primo. 
 
-Resposta: Falso (F) -->
+Resposta: Falso (F)
