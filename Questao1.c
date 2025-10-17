@@ -103,6 +103,11 @@ long long potenciaModular(long long base, long long exp, long long mod) {
 }
 
 int main() {
+
+    printf("Integrantes do Grupo:\n");
+    printf("Giovani de Oliveira Teodoro Coelho - 241032500\n");
+    printf("Luiz Henrique Pallavicini - 241012329\n\n");
+    
     long long n1, n2, p, q, n, z, e, d;
 
     printf("ETAPA 1: FATORACAO (METODO p de POLLARD)\n");

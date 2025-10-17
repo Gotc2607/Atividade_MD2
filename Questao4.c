@@ -5,7 +5,7 @@ int mdcComPassos(int a, int b) {
     int resto;
     printf("   Executando Algoritmo de Euclides para mdc(%d, %d):\n", a, b);
 
-    // >>> ALTERAÇÃO [1] - Linha 10 <<<
+    //  ALTERAÇÃO [1] - Linha 10 
     // O que foi alterado: A condição `b != 0` foi adicionada ao `while`.
     // Por quê: Esta é a condição de parada fundamental do Algoritmo de Euclides. O loop
     // continua executando as divisões sucessivas até que o resto (que se torna o novo 'b')
@@ -15,7 +15,7 @@ int mdcComPassos(int a, int b) {
         printf("   - Passo: %d mod %d = %d\n", a, b, resto);
         a = b;
 
-        // >>> ALTERAÇÃO [2] - Linha 14 <<<
+        //  ALTERAÇÃO [2] - Linha 14 
         // O que foi alterado: O valor de `b` agora recebe o `resto`.
         // Por quê: Este é o passo de atualização do algoritmo. O divisor anterior ('b') se
         // torna o novo dividendo, e o resto da divisão ('resto') se torna o novo divisor
@@ -28,7 +28,7 @@ int mdcComPassos(int a, int b) {
 
 // Função para calcular o inverso modular usando o Algoritmo de Euclides Estendido
 int inversoModular(int a, int m) {
-    // >>> ALTERAÇÃO [3] - Linha 23 <<<
+    // ALTERAÇÃO [3] - Linha 23 
     // O que foi alterado: Uma verificação `if (mdcComPassos(a, m) != 1)` foi inserida.
     // Por quê: O inverso modular de 'a' (mod m) só existe se 'a' e 'm' forem primos entre si,
     // ou seja, se o máximo divisor comum entre eles for 1. Esta linha garante essa
@@ -50,7 +50,7 @@ int inversoModular(int a, int m) {
         x1 = t;
     }
     
-    // >>> ALTERAÇÃO [4] - Linha 36 <<<
+    //  ALTERAÇÃO [4] - Linha 36 
     // O que foi alterado: A linha `x1 += m0` foi adicionada dentro de um `if`.
     // Por quê: O Algoritmo de Euclides Estendido pode retornar um coeficiente de Bézout (o inverso)
     // que é negativo. Matematicamente, o resultado está correto, mas em criptografia e aritmética
@@ -67,7 +67,7 @@ long long powMod(int base, int exp, int mod) {
     long long res = 1;
     long long b = base % mod;
     while (exp > 0) {
-        // >>> ALTERAÇÃO [5] - Linha 45 <<<
+        // ALTERAÇÃO [5] - Linha 45 
         // O que foi alterado: Uma verificação `if (exp % 2 == 1)` foi inserida.
         // Por quê: Esta é a lógica central do método de exponenciação binária (ou por quadratura).
         // Ele decompõe o expoente em potências de 2. Se o bit menos significativo do expoente
@@ -89,7 +89,7 @@ int main() {
 
     printf("1. Calculando a divisao modular: (%d / %d) mod %d\n", H, G, Zn);
     
-    // >>> ALTERAÇÃO [6] - Linha 72 <<<
+    //  ALTERAÇÃO [6] - Linha 72 
     // O que foi alterado: A variável `inverso` recebe o resultado da chamada da função `inversoModular`.
     // Por quê: Para realizar a divisão modular (H / G), primeiro precisamos encontrar o inverso
     // modular de G. Esta linha executa a chamada à função que implementa o Algoritmo de
@@ -105,7 +105,7 @@ int main() {
 
     printf("\n3. Calculando a potencia modular: %d^%d mod %d\n", a, x, n1);
 
-    // >>> ALTERAÇÃO [7] - Linha 78 <<<
+    //  ALTERAÇÃO [7] - Linha 78 
     // O que foi alterado: A variável `resultado` recebe o resultado da chamada da função `powMod`.
     // Por quê: Esta é a segunda parte do problema. Após encontrar o valor de 'a' (resultado da
     // divisão modular), precisamos calcular a^x mod n1. Esta linha chama a função de

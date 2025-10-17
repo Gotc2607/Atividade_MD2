@@ -11,6 +11,11 @@ long long power(int base, int exp) {
 }
 
 int main() {
+
+    printf("Integrantes do Grupo:\n");
+    printf("Giovani de Oliveira Teodoro Coelho - 241032500\n");
+    printf("Luiz Henrique Pallavicini - 241012329\n\n");
+
     int n;
     printf("--- QUESTAO 03: A RAZAO DE EFICIENCIA DE UM NUMERO ---\n");
     
