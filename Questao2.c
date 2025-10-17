@@ -19,7 +19,7 @@ long long mmc(long long a, long long b) {
 
 int main() {
     int n;
-    printf("Digite o numero de chaves (N): ");
+    printf("Digite o numero de chaves entre 1 e 10(N): ");
     scanf("%d", &n);
     
     if (n < 1 || n > 10) {
