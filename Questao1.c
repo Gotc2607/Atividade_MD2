@@ -217,7 +217,6 @@ int main() {
     char msg_decodificada_str[101];
     for (int i = 0; i < count; i++) {
         printf("\n- Decodificando bloco C=%lld:\n", msg_criptografada[i]);
-        // CORREÇÃO: Passando o totiente 'z' para a função.
         long long m_decodificado = potenciaModular(msg_criptografada[i], d, n, z);
         printf("  - Resultado M = C^%lld mod %lld\n", d, n);
         printf("  - M = %lld\n", m_decodificado);

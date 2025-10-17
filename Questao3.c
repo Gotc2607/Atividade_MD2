@@ -19,9 +19,6 @@ int main() {
     int n;
     printf("--- QUESTAO 03: A RAZAO DE EFICIENCIA DE UM NUMERO ---\n");
     
-    // --- CORREÇÃO APLICADA AQUI ---
-    // A mensagem foi corrigida para refletir o limite real de validação do programa (100000),
-    // que interpreta o provável erro de digitação "105" no PDF como "10^5".
     printf("Digite um unico inteiro N (1 <= N <= 100000): ");
     scanf("%d", &n);
 
