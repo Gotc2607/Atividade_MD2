@@ -12,21 +12,29 @@ long long power(int base, int exp) {
 
 int main() {
 
-    printf("Integrantes do Grupo:\n");
-    printf("Giovani de Oliveira Teodoro Coelho - 241032500\n");
-    printf("Luiz Henrique Pallavicini - 241012329\n\n");
+
 
     int n;
     printf("--- QUESTAO 03: A RAZAO DE EFICIENCIA DE UM NUMERO ---\n");
     
+
     printf("Digite um unico inteiro N (1 <= N <= 100000): ");
     scanf("%d", &n);
 
-    // Validação da entrada
-    if (n < 1 || n > 100000) {
-        printf("Erro: O numero N esta fora do intervalo permitido [1, 100000].\n");
-        return 1;
-    }
+  
+    // O programa vai *executar* (do) o bloco pelo menos uma vez,
+    // e vai *repetir* (while) ENQUANTO a entrada for inválida.
+    do {
+        printf("Digite um unico inteiro N (1 <= N <= 105): ");
+        scanf("%d", &n);
+
+        // Validação da entrada
+        if (n < 1 || n > 105) {
+            printf("Erro: O numero N esta fora do intervalo permitido [1, 105]. Tente novamente.\n");
+        }
+    } while (n < 1 || n > 105); // Condição para repetir o loop
+
+
 
     printf("\nAnalisando o numero: %d\n", n);
     printf("--------------------------------------------------\n");
@@ -35,9 +43,9 @@ int main() {
     long long tau_n = 1;   // tau(N) armazena o número de divisores
     long long sigma_n = 1; // sigma(N) armazena a soma dos divisores
 
-    // Passo 1: Fatoração Prima utilizando Trial Division [cite: 115]
+    // Passo 1: Fatoração Prima utilizando Trial Division
     printf("1. FATORACAO PRIMA (N = p1^a1 * p2^a2 * ...):\n");
-    printf("   Lista de fatores primos e seus expoentes:\n"); // [cite: 122]
+    printf("   Lista de fatores primos e seus expoentes:\n"); 
 
     for (int i = 2; i * i <= temp_n; i++) {
         if (temp_n % i == 0) {
@@ -62,20 +70,20 @@ int main() {
     }
     printf("--------------------------------------------------\n");
 
-    // Passo 2: Exibição dos Cálculos Intermediários de tau e sigma [cite: 117]
+    // Passo 2: Exibição dos Cálculos Intermediários de tau e sigma
     printf("2. CALCULOS INTERMEDIARIOS:\n");
     printf("   - Calculo de tau(N) (numero de divisores): %lld\n", tau_n);
-    printf("   - Calculo de sigma(N) (soma dos divisores): %lld\n", sigma_n); // [cite: 124]
+    printf("   - Calculo de sigma(N) (soma dos divisores): %lld\n", sigma_n); 
     printf("--------------------------------------------------\n");
 
     // Passo 3: Cálculo da Razão de Eficiência
     double razao = 0.0;
     if (tau_n != 0) {
-        razao = (double)sigma_n / tau_n; // [cite: 107]
+        razao = (double)sigma_n / tau_n; 
     }
-    printf("3. RESULTADO FINAL (Razao de Eficiencia):\n"); // [cite: 125]
+    printf("3. RESULTADO FINAL (Razao de Eficiencia):\n"); 
     printf("   Razao(%d) = sigma(%d) / tau(%d) = %lld / %lld\n", n, n, n, sigma_n, tau_n);
-    // Saída formatada como número real com duas casas decimais [cite: 110]
+    // Saída formatada como número real com duas casas decimais
     printf("\n   >> A Razao de Eficiencia de %d e: %.2f\n", n, razao);
     printf("--------------------------------------------------\n");
 
